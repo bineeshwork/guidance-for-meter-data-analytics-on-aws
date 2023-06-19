@@ -309,7 +309,6 @@ Resources:
       Runtime: python3.9
       MemorySize: 512
       Timeout: 240
-      ReservedConcurrentExecutions: 1
       Handler: 'app.lambda_handler'
       Code:
         S3Bucket: !If [ UsingDefaultBucket, !Sub '${QSS3BucketName}-${AWS::Region}', !Ref QSS3BucketName ]
